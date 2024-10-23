@@ -1,16 +1,88 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <meta http-equiv="refresh" content="30">
-  </head>
-  <body>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .dropdown {
+            text-align: center;
+            margin: 20px 0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            background-color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: #f44336;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 100px;
+        }
+        a:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <!-- Display the dropdown list at here -->
-    <%- droplist %>
-    <!-- Display the products table at here -->
+    
+    <!-- Display the dropdown list here -->
+    <div class="dropdown">
+        <label for="options">Choose an option:</label>
+        <%- droplist %>
+    </div>
+
+    <!-- Display the products table here -->
     <%- products_table %>
+
     <a href="/logout">Logout</a>
-  </body>
+</body>
 </html>
